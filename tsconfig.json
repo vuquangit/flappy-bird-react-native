@@ -11,9 +11,9 @@
     "moduleResolution": "node",
     "noEmit": true,
     "target": "esnext",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/*":["*"]
+      "@/*": ["src/*"],
     },
   },
   "exclude": [

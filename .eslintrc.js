@@ -40,5 +40,14 @@ module.exports = {
       'always'
     ],
     'prettier/prettier': 'error',
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "alias": {
+          "map": "[['@', path.resolve(__dirname, 'src')]]"
+        }
+      }
+    }
   }
 };

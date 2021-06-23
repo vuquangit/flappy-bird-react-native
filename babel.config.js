@@ -3,14 +3,13 @@ module.exports = function(api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
+      "@babel/plugin-syntax-dynamic-import",
       [
         "module-resolver",
         {
-          "root": [
-            "./src"
-          ],
+          // "root": ["./src"],
           "alias": {
-            "@": "./src"
+            "@": "./src",
           }
         }
       ]

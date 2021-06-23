@@ -3,11 +3,11 @@ import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Image } from 'reac
 import Matter from 'matter-js';
 import { GameEngine } from 'react-native-game-engine';
 
-import Bird from '../components/Bird';
-import Floor from '../components/Floor';
-import Physics, { resetPipes } from '../helpers/Physics';
-import Constants from '../constants';
-import Images from '../assets/Images';
+import Bird from '@/components/Bird';
+import Floor from '@/components/Floor';
+import Physics, { resetPipes } from '@/helpers/Physics';
+import Constants from '@/constants';
+import Images from '@/assets/Images';
 
 export default class Home extends Component {
   constructor(props){
