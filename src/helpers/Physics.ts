@@ -1,6 +1,8 @@
 import Matter from "matter-js";
-import Pipe from '../components/Pipe';
-import PipeTop from '../components/PipeTop';
+
+import Constants from "@/constants";
+import Pipe from '@/components/Pipe';
+import PipeTop from '@/components/PipeTop';
 
 let tick = 0;
 let pose = 1;
@@ -97,7 +99,7 @@ const Physics = (entities, { touches, time, dispatch }) => {
     let bird = entities.bird.body;
 
     let hadTouches = false;
-    touches.filter(t => t.type === "press").forEach(t => {
+    touches.filter((t: { type: string; }) => t.type === "press").forEach(() => {
         if (!hadTouches){
             if (world.gravity.y === 0.0){
                 world.gravity.y = 1.2;
@@ -112,7 +114,6 @@ const Physics = (entities, { touches, time, dispatch }) => {
                 y: -10
             });
         }
-
     });
 
     Matter.Engine.update(engine, time.delta);
